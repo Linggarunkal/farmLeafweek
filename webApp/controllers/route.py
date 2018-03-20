@@ -57,4 +57,7 @@ def catalogDetailInvert(catalogid):
     return jsonify({'Message': 'Jagung baakar', 'code': catalogid})
 
 
+@app.route('/username/<user>')
+def username(user):
+    return jsonify({'Message': 'Username', 'name': user})
 #handling front end and handling request from user
