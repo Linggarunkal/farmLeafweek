@@ -32,7 +32,7 @@ class signin(object):
             return "Error Database: %s" % str(e)
 
 
-class signin(object):
+class signup(object):
     def __init__(self, fname, lname, email, password):
         self.fname = fname
         self.lname = lname
@@ -46,6 +46,15 @@ class signin(object):
         try:
             passHash = self.passwdEncrypt(self.password)
             conn = mysqlconnection(HOST, USERNAME, PASSWORD, DATABASE)
+            conn.cursor()
+            conn.callproc()
 
         except Exception as e:
             return "Error Database: %s" % str(e)
+
+
+class getUser(object):
+    def show(self):
+        conn = mysqlconnection(HOST, USERNAME, PASSWORD, DATABASE)
+        userAll = conn.select('users', None, '*')
+        return userAll

@@ -4,6 +4,7 @@ from webApp import app
 from flask import render_template, jsonify
 from webApp.library.connection import *
 from webApp.library.config import *
+from webApp.models.auth import getUser
 
 
 @app.route('/')
@@ -60,4 +61,11 @@ def catalogDetailInvert(catalogid):
 @app.route('/username/<user>')
 def username(user):
     return jsonify({'Message': 'Username', 'name': user})
-#handling front end and handling request from user
+
+
+@app.route('/hi')
+def hi():
+    user = getUser()
+    telo = user.show()
+    length = len(telo[0])
+    return jsonify({'code': 200, 'message': telo[0], 'length': length})

@@ -2,4 +2,4 @@
 HOST = 'localhost'
 USERNAME = 'root'
 PASSWORD = ''
-DATABASE = 'testing'
+DATABASE = 'farmLeafweek'
