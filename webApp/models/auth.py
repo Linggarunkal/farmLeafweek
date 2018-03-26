@@ -2,6 +2,7 @@ from webApp.library.connection import *
 from webApp.library.config import *
 from passlib.hash import sha256_crypt
 from flask import jsonify
+import MySQLdb
 
 
 class signin(object):
@@ -45,9 +46,13 @@ class signup(object):
     def registration(self):
         try:
             passHash = self.passwdEncrypt(self.password)
-            conn = mysqlconnection(HOST, USERNAME, PASSWORD, DATABASE)
-            conn.cursor()
-            conn.callproc()
+            conn = MySQLdb.connect(HOST, USERNAME, PASSWORD, DATABASE)
+            conn_cursor = conn.cursor()
+            # call insertUserCustomer('siti', 'ulfa', 'siti@mail.com', 'smulfa');
+            # userRegist = conn.('insertUserCustomer', self.fname, self.lname, self.email, self.password)
+            userRegist = conn_cursor.execute("call insertUserCustomer('"+self.fname+"','"+self.lname+"','"+self.email+"','"+self.password+"');")
+            return userRegist
+
 
         except Exception as e:
             return "Error Database: %s" % str(e)
@@ -58,3 +63,5 @@ class getUser(object):
         conn = mysqlconnection(HOST, USERNAME, PASSWORD, DATABASE)
         userAll = conn.select('users', None, '*')
         return userAll
+
+

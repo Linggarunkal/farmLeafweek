@@ -4,7 +4,7 @@ from webApp import app
 from flask import render_template, jsonify
 from webApp.library.connection import *
 from webApp.library.config import *
-from webApp.models.auth import getUser
+from webApp.models.auth import getUser, signup
 
 
 @app.route('/')
@@ -69,3 +69,15 @@ def hi():
     telo = user.show()
     length = len(telo[0])
     return jsonify({'code': 200, 'message': telo[0], 'length': length})
+
+
+@app.route('/postRegistration')
+def postRegistration():
+    fname = 'Fajar'
+    lname = 'Wicaksono'
+    email = 'fajar@mail.com'
+    passwd = 'fajar'
+
+    userSignup = signup(fname, lname, email, passwd)
+    postUserSignup = userSignup.registration()
+    return jsonify({'code': 200, 'message': postUserSignup})
