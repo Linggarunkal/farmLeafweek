@@ -4,9 +4,11 @@ from webApp import app
 from flask import render_template, jsonify
 from webApp.library.connection import *
 from webApp.library.config import *
-from webApp.models.auth import getUser, signup
+from webApp.models.auth import signup, passwdHash, signin
+from webApp.models.catalog import cataloglist
 
 
+# GET Process
 @app.route('/')
 def start():
     return render_template('printer/index.html')
@@ -28,33 +30,21 @@ def testing2():
     return jsonify({'Message': 'list manager', 'value': jab.get_jabatan(state)})
 
 
-@app.route('/tahu')
-def tahu():
-    return render_template('tahu.html')
-
-
 @app.route('/print')
 def printer():
     return render_template('printer/print.html')
 
 
-@app.route('/profile')
-def profile():
-    return jsonify({'Message': 'ini from page yang profile'})
-
-
-@app.route('/tempe')
-def tempe():
-    return jsonify({'Message': 'ini tempe page'})
-
-
+# isi catalog foto, nama, harga return value, id catalog(for link)
 @app.route('/catalog/invertment')
-def catalogInvert():
-    return jsonify({'Message': 'list all catalog investnment'})
+def cataloginvest():
+    catalog = cataloglist()
+    listcatalog = catalog.listreview()
+    return listcatalog
 
 
 @app.route('/catalog/invertment/<catalogid>')
-def catalogDetailInvert(catalogid):
+def catalogdetailinvert(catalogid):
     return jsonify({'Message': 'Jagung baakar', 'code': catalogid})
 
 
@@ -63,21 +53,26 @@ def username(user):
     return jsonify({'Message': 'Username', 'name': user})
 
 
-@app.route('/hi')
-def hi():
-    user = getUser()
-    telo = user.show()
-    length = len(telo[0])
-    return jsonify({'code': 200, 'message': telo[0], 'length': length})
-
-
+# Post Status
 @app.route('/postRegistration')
-def postRegistration():
-    fname = 'Fajar'
-    lname = 'Wicaksono'
-    email = 'fajar@mail.com'
-    passwd = 'fajar'
+def postregistration():
+    fname = 'akbar'
+    lname = 'Wijayanto'
+    email = 'akbar@mail.com'
+    passwd = 'akbar'
 
-    userSignup = signup(fname, lname, email, passwd)
-    postUserSignup = userSignup.registration()
-    return jsonify({'code': 200, 'message': postUserSignup})
+    hashpasswd = passwdHash()
+    passwdencrypt = hashpasswd.passwdEncrypt(passwd)
+    usersignup = signup(fname, lname, email, passwdencrypt)
+    postusersignup = usersignup.registration()
+    return jsonify({'code': 200, 'message': postusersignup, 'Message02': passwdencrypt})
+
+
+@app.route('/postUserLogin')
+def postuserlogin():
+    email = 'akbar@mail.com'
+    password = 'akbar'
+
+    loginuser = signin(email, password)
+    postlogin = loginuser.login()
+    return postlogin

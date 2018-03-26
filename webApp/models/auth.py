@@ -40,28 +40,17 @@ class signup(object):
         self.email = email
         self.password = password
 
-    def passwdEncrypt(self, passwd):
-        return sha256_crypt.encrypt(passwd)
-
     def registration(self):
         try:
-            passHash = self.passwdEncrypt(self.password)
             conn = MySQLdb.connect(HOST, USERNAME, PASSWORD, DATABASE)
             conn_cursor = conn.cursor()
-            # call insertUserCustomer('siti', 'ulfa', 'siti@mail.com', 'smulfa');
-            # userRegist = conn.('insertUserCustomer', self.fname, self.lname, self.email, self.password)
-            userRegist = conn_cursor.execute("call insertUserCustomer('"+self.fname+"','"+self.lname+"','"+self.email+"','"+self.password+"');")
-            return userRegist
-
+            userregist = conn_cursor.execute("call insertUserCustomer('"+self.fname+"','"+self.lname+"','"+self.email+"','"+self.password+"');")
+            return userregist
 
         except Exception as e:
             return "Error Database: %s" % str(e)
 
 
-class getUser(object):
-    def show(self):
-        conn = mysqlconnection(HOST, USERNAME, PASSWORD, DATABASE)
-        userAll = conn.select('users', None, '*')
-        return userAll
-
-
+class passwdHash(object):
+    def passwdEncrypt(self, passwd):
+        return sha256_crypt.encrypt(passwd)
