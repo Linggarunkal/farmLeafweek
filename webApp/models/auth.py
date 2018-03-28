@@ -25,12 +25,12 @@ class signin(object):
                 if verify:
                     return jsonify({'status': 200, 'Message': 'Verify User'})
                 else:
-                    return jsonify({'status': 400, 'Message': 'Failed Credential'})
+                    return jsonify({'status': 202, 'Message': 'Failed Credential'})
             else:
-                return jsonify({'status': 400, 'Message': 'User not Exist' })
+                return jsonify({'status': 401, 'Message': 'User not Exist' })
 
         except Exception as e:
-            return "Error Database: %s" % str(e)
+            return jsonify({'code': 500, 'Message': "Error Database: %s" % str(e)})
 
 
 class signup(object):
@@ -48,7 +48,7 @@ class signup(object):
             return userregist
 
         except Exception as e:
-            return "Error Database: %s" % str(e)
+            return jsonify({'code': 500, 'Message': "Error Database: %s" % str(e)})
 
 
 class passwdHash(object):

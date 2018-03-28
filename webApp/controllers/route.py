@@ -6,19 +6,12 @@ from webApp.library.connection import *
 from webApp.library.config import *
 from webApp.models.auth import signup, passwdHash, signin
 from webApp.models.catalog import cataloglist
-
+import json
 
 # GET Process
 @app.route('/')
 def start():
     return render_template('printer/index.html')
-
-
-@app.route('/testing')
-def testing():
-    conn = mysqlconnection(HOST, USERNAME, PASSWORD, DATABASE)
-    jabatan = conn.select('jabatan', None, 'id_jabatan, nama_jabatan')
-    return jsonify({'Message': 'Testing', 'value': jabatan})
 
 
 @app.route('/testing2')
@@ -30,22 +23,20 @@ def testing2():
     return jsonify({'Message': 'list manager', 'value': jab.get_jabatan(state)})
 
 
-@app.route('/print')
-def printer():
-    return render_template('printer/print.html')
-
-
 # isi catalog foto, nama, harga return value, id catalog(for link)
 @app.route('/catalog/investment')
 def cataloginvest():
     catalog = cataloglist()
     listcatalog = catalog.listreview()
+    print listcatalog
     return listcatalog
 
 
-@app.route('/catalog/invertment/<catalogid>')
+@app.route('/catalog/investment/<catalogid>')
 def catalogdetailinvert(catalogid):
-    return jsonify({'Message': 'Jagung baakar', 'code': catalogid})
+    catalog = cataloglist()
+    detCat = catalog.detailCatalog(catalogid)
+    return detCat
 
 
 @app.route('/username/<user>')
