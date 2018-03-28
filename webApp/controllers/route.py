@@ -36,7 +36,7 @@ def printer():
 
 
 # isi catalog foto, nama, harga return value, id catalog(for link)
-@app.route('/catalog/invertment')
+@app.route('/catalog/investment')
 def cataloginvest():
     catalog = cataloglist()
     listcatalog = catalog.listreview()
