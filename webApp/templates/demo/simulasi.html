@@ -1,0 +1,125 @@
+{% extends 'base/based.html' %}
+{% block title %}Timeline Simulasi{% endblock %}
+{{ super() }}
+{% block content %}
+      <div id="serviceListSection" class="service-list-section module md-bg-light pb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-header">
+                <h2 class="section-title text-center">Simulation</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="panel">
+                      <div class="panel-body">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <section id="cd-timeline" class="cd-container">
+                                      <div class="cd-timeline-block">
+                                          <div class="cd-timeline-img cd-success">
+                                              <i class="fa fa-tag"></i>
+                                          </div> <!-- cd-timeline-img -->
+
+                                          <div class="cd-timeline-content">
+                                              <h3>Simulation One</h3>
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                                              <span class="cd-date">May 23</span>
+                                          </div> <!-- cd-timeline-content -->
+                                      </div> <!-- cd-timeline-block -->
+
+                                      <div class="cd-timeline-block">
+                                          <div class="cd-timeline-img cd-danger">
+                                              <i class="fa fa-thumbs-up"></i>
+                                          </div> <!-- cd-timeline-img -->
+
+                                          <div class="cd-timeline-content">
+                                              <h3>Simulation Two</h3>
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+                                              <button type="button" class="btn btn-primary btn-rounded waves-effect waves-light m-t-15">See more detail</button>
+
+                                              <span class="cd-date">May 30</span>
+                                          </div> <!-- cd-timeline-content -->
+                                      </div> <!-- cd-timeline-block -->
+
+                                      <div class="cd-timeline-block">
+                                          <div class="cd-timeline-img cd-info">
+                                              <i class="fa fa-star"></i>
+                                          </div> <!-- cd-timeline-img -->
+
+                                          <div class="cd-timeline-content">
+                                              <h3>Simulation Three</h3>
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat ... <a href="#">Read more</a></p>
+                                              <span class="cd-date">Jun 05</span>
+                                          </div> <!-- cd-timeline-content -->
+                                      </div> <!-- cd-timeline-block -->
+
+                                      <div class="cd-timeline-block">
+                                          <div class="cd-timeline-img cd-pink">
+                                              <i class="fa fa-image"></i>
+                                          </div> <!-- cd-timeline-img -->
+
+                                          <div class="cd-timeline-content">
+                                              <h3>Simulation Four</h3>
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                                              <img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" alt="" class="img-responsive">
+                                              <span class="cd-date">Jun 14</span>
+                                          </div> <!-- cd-timeline-content -->
+                                      </div> <!-- cd-timeline-block -->
+
+                                      <div class="cd-timeline-block">
+                                          <div class="cd-timeline-img cd-warning">
+                                              <i class="fa fa-pencil-square-o"></i>
+                                          </div> <!-- cd-timeline-img -->
+
+                                          <div class="cd-timeline-content">
+                                              <h3>Simulation Five</h3>
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+                                              <button type="button" class="btn btn-primary btn-rounded waves-effect waves-light m-t-15">See more detail</button>
+                                              <span class="cd-date">Jun 18</span>
+                                          </div> <!-- cd-timeline-content -->
+                                      </div> <!-- cd-timeline-block -->
+
+                                      <div class="cd-timeline-block">
+                                          <div class="cd-timeline-img cd-primary">
+                                              <i class="fa fa-paperclip"></i>
+                                          </div> <!-- cd-timeline-img -->
+
+                                          <div class="cd-timeline-content">
+                                              <h3>Simulation End</h3>
+                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+                                              <span class="cd-date">Jun 30</span>
+                                          </div> <!-- cd-timeline-content -->
+                                      </div> <!-- cd-timeline-block -->
+                                  </section> <!-- cd-timeline -->
+                              </div>
+                          </div><!-- Row -->
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- end row -->
+
+      </div><!-- container -->
+      </div>
+
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/spinner.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-wysihtml5/wysihtml5-0.3.0.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-wysihtml5/bootstrap-wysihtml5.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-colorpicker/js/bootstrap-colorpicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-timepicker/js/bootstrap-timepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/jquery-multi-select/js/jquery.multi-select.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/jquery-multi-select/js/jquery.quicksearch.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/advanced-form-components.js') }}"></script>
+{% endblock %}

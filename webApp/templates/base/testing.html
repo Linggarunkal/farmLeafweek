@@ -1,0 +1,181 @@
+{% extends "base/based.html" %}
+{% block title %}testing{% endblock %}
+{{ super() }}
+{% block content %}
+
+<div id="serviceListSection" class="service-list-section module md-bg-light pb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <section class="panel">
+                <div class="panel-body">
+                  <div class="stepy-tab visible-lg">
+                    <ul id="default-titles" class="stepy-titles clearfix">
+                        <li class="current-step">
+                            <div><i class="fa fa-clipboard fa-3x"></i> <center>Review</center></div>
+                        </li>
+                        <li class="stepy-arrow current-arrow"></li>
+                        <li class="">
+                            <div><i class="fa fa-check-square fa-3x"></i> <center>Payment Method</center></div>
+                        </li>
+                        <li class="stepy-arrow"></li>
+                        <li class="">
+                            <div><i class="fa fa-credit-card fa-3x"></i> <center>Payment</center></div>
+                        </li>
+                        <li class="stepy-arrow"></li>
+                        <li class="">
+                            <div><i class="fa fa-clock-o fa-3x"></i> <center>Livestock</center></div>
+                        </li>
+                        <li class="stepy-arrow"></li>
+                        <li class="">
+                            <div><i class="fa fa-clock-o fa-3x"></i> <center>Livestock Breeding</center></div>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="stepy-tab2 hidden-lg">
+                    <ul>
+                      <li class="current-step">Review &emsp;<i class="fa fa-angle-right"></i> </li>
+                      <li class="current-step">Choose Payment Method &emsp;<i class="fa fa-angle-right"></i> </li>
+                      <li>Payment &emsp;<i class="fa fa-angle-right"></i> </li>
+                      <li>Prepraring Livestock &emsp;<i class="fa fa-angle-right"></i> </li>
+                      <li>Livestock Breeding Process</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="serviceListSection" class="service-list-section md-bg-light pb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="panel">
+                <header class="panel-heading">
+                  <h2>Review Catalog Investasi</h2>
+                </header>
+                <div class="panel-body review-catalog">
+                  <div class="col-sm-3 mb-20">
+                  	<img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" class="img-responsive">
+                  </div>
+                  <div class="col-sm-5">
+              		<p>Catalog Name</p>
+              		<p>Rp. 2.000.000,-</p>
+                  	<div class="row">
+                      <section class="panel">
+                        <div class="panel-body">
+                          <div class="form-group ">
+                            <div id="spinner1">
+                              <div class="input-group">
+                                  <div class="spinner-buttons input-group-btn">
+                                      <button type="button" class="btn spinner-down btn-primary">
+                                          <i class="fa fa-minus"></i>
+                                      </button>
+                                  </div>
+                                  <input type="text" class="spinner-input form-control" readonly value="1">
+                                  <div class="spinner-buttons input-group-btn">
+                                      <button type="button" class="btn spinner-up btn-primary">
+                                          <i class="fa fa-plus"></i>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                  	<p>20% - 40% per tahun</p>
+                  </div>
+                  <div class="col-sm-12">
+                  	Transaction Number
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel">
+                <header class="panel-heading">
+                  <h2>Review Detail Investor</h2>
+                </header>
+                <div class="panel-body">
+					<form method="post" action="#" class="row">
+						<div class="form-group col-sm-6">
+						  <label for="firstname">First Name</label>
+						  <input id="firstname" type="text" name="firstname" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+						  <label for="lastname">Last Name</label>
+						  <input id="lastname" type="text" name="lastname" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+						  <label for="emailinvestor">Email</label>
+						  <input id="emailinvestor" type="email" name="emailinvestor" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+						  <label for="notelp">No Telp</label>
+						  <input id="notelp" type="text" name="notelp" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+						  <label for="noktp">No KTP</label>
+						  <input id="noktp" type="text" name="noktp" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+						  <label for="nonpwp">No NPWP</label>
+						  <input id="nonpwp" type="text" name="nonpwp" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+						  <label for="provinsi">Provinsi</label>
+						  <input id="provinsi" type="text" name="provinsi" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+						  <label for="kotakab">Kota / Kabupaten</label>
+						  <input id="kotakab" type="text" name="kotakab" class="form-control">
+						</div>
+						<div class="form-group col-sm-12">
+						  <label for="kotakab">Alamat</label>
+						  <textarea class="form-control" rows="3"></textarea>
+						</div>
+						<div class="form-group col-sm-12">
+						  <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Save</button>
+						</div>
+					</form>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="panel">
+                <header class="panel-heading">
+                  <h2>Summary Investment</h2>
+                </header>
+                <div class="panel-body">
+                  <article class="row">
+                    <div class="col-sm-4"><h4>Investment Fee</h4></div>
+                    <div class="col-sm-8">
+                      <h4>Rp. 2.000.000,-</h4>
+                    </div>
+                  </article>
+                  <article class="row">
+                    <div class="col-sm-4"><h4>Admin Fee</h4></div>
+                    <div class="col-sm-8">
+                      <h4>Rp. 0,-</h4>
+                    </div>
+                  </article>
+                  <div class="separator"></div>
+                  <article class="row">
+                    <div class="col-sm-4"><h4>Total Investment</h4></div>
+                    <div class="col-sm-8">
+                      <h4>Rp. 2.000.000,-</h4>
+                    </div>
+                  </article>
+
+                  <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Payment Method</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

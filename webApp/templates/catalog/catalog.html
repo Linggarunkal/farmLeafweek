@@ -1,0 +1,302 @@
+{% extends 'base/based.html' %}
+{% block title %}Catalog Investment{% endblock %}
+{{ super() }}
+{% block content %}
+      <!-- .team-section-->
+      <div id="pricingSection" class="pricing-section module md-bg-light">
+        <div class="container">
+          <div class="row-content row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="section-header">
+                <h2 class="section-title">Catalog Investasi</h2>
+              </div>
+            </div>
+          </div>
+
+          <section class="panel">
+            <div class="panel-body">
+                <div class="col-sm-2">Filter By :
+                  <select name="filter"> 
+                    <option value="0">Filter 1</option>
+                    <option value="1">Filter 2</option>
+                    <option value="2">Filter 3</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <input type="radio" name="filter" id="terbaru" /> <label for="terbaru"> Terbaru</label>
+                </div>
+                <div class="col-sm-2">
+                  <input type="radio" name="filter" id="termahal" /> <label for="termahal"> Termahal</label>
+                </div>
+                <div class="col-sm-2">
+                  <input type="radio" name="filter" id="termurah" /> <label for="termurah"> Termurah</label>
+                </div>
+                <div class="col-sm-2">
+                  <input type="radio" name="filter" id="terfavorit" /> <label for="terfavorit"> Terfavorit</label>
+                </div>
+                <div class="col-sm-2">
+                  <input type="radio" name="filter" id="trending" /> <label for="trending"> Trending</label>
+                </div>
+            </div>
+          </section>
+          <div class="row-content row mb-10">
+            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>  
+            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>  
+            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>            
+          </div>
+          <!--pagination start-->
+          <section class="panel">
+              <div class="panel-body">
+                  <div>
+                      <ul class="pagination pagination-lg pull-right">
+                          <li><a href="#">«</a></li>
+                          <li><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li><a href="#">»</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </section>
+          <!--pagination end-->
+        </div>
+      </div>
+
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+{% endblock %}

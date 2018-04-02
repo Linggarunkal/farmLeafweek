@@ -1,0 +1,242 @@
+{% extends 'base/based.html' %}
+{% block title %}Detail Catalog Investment{% endblock %}
+{{ super() }}
+{% block content %}
+      <div id="feature1Section" class="feature-1-section module md-bg-white pb-80">
+        <div class="container">
+          <div class="row-content row">
+            <div class="col-el col-sm-8 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-0"><img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" alt="" class="section-media-img"></div>
+            <div class="col-content col-md-7">
+              <h2 class="section-title">Sapi Perah <small class="text-secondary">Rp. 2.000.000 / Slot</small></h2>
+              <div class="section-content">
+                <div class="row">
+                  <div class="col-sm-4">Contact Period</div>
+                  <div class="col-sm-8">: </div>
+                  <div class="col-sm-4">Return Investment</div>
+                  <div class="col-sm-8">: </div>
+                  <div class="col-sm-4">Profit Sharing Period</div>
+                  <div class="col-sm-8">: </div>
+                  <div class="col-sm-4">Available Slot</div>
+                  <div class="col-sm-8">: </div>
+
+                  <div class="col-sm-12 mt-30"><strong>Input Total Slot</strong></div>
+                  <!--Spinner start-->
+                  <div class="col-md-12">
+                    <div class="row">
+                      <section class="panel">
+                        <div class="panel-body">
+                          <div class="form-group ">
+                            <div id="spinner1">
+                              <div class="input-group col-sm-6 col-xs-12">
+                                  <div class="spinner-buttons input-group-btn">
+                                      <button type="button" class="btn spinner-down btn-primary">
+                                          <i class="fa fa-minus"></i>
+                                      </button>
+                                  </div>
+                                  <input type="text" class="spinner-input form-control" readonly value="1">
+                                  <div class="spinner-buttons input-group-btn">
+                                      <button type="button" class="btn spinner-up btn-primary">
+                                          <i class="fa fa-plus"></i>
+                                      </button>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 mt-0">
+                  <a href="#" class="btn btn-lg btn-pill btn-shadow btn-theme-1 col-lg-8 col-xs-12">
+                    Investment
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--tab nav start-->
+      <div id="feature1Section" class="mt-0 md-bg-white">
+        <div class="container">
+          <div class="row-content row">
+            <section class="panel">
+                <header class="panel-heading">
+                    <ul class="nav nav-tabs tab-description">
+                        <li class="active">
+                            <a data-toggle="tab" href="#description">Description</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#review">Review</a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#roi">ROI Simulation</a>
+                        </li>
+                    </ul>
+                </header>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div id="description" class="tab-pane active">
+                          <h4>Description Content</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div id="review" class="tab-pane">
+                          <section class="panel">
+                            <div class="row panel-body">
+                              <div class="col-sm-12 mb-20 review-content">
+                                <div class="col-sm-2">
+                                  <img src="{{ url_for('static', filename='assets/img/service-list-icon-2.png') }}" alt="" class="iconbox-media-img iconbox-media-img-lg">
+                                </div>
+                                <div class="col-sm-6">
+                                  <span class="rating">
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x"></span>
+                                  </span>
+                                  <p>
+                                  <span>Username,</span> <span>12 Februari 2018,</span> <span>14.00</span>
+                                  </p>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-sm-12 mb-20 review-content">
+                                <div class="col-sm-2">
+                                  <img src="{{ url_for('static', filename='assets/img/service-list-icon-2.png') }}" alt="" class="iconbox-media-img iconbox-media-img-lg">
+                                </div>
+                                <div class="col-sm-6">
+                                  <span class="rating">
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x grey-star"></span>
+                                  </span>
+                                  <p>
+                                  <span>Username,</span> <span>12 Februari 2018,</span> <span>14.00</span>
+                                  </p>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-sm-12 mb-20 review-content">
+                                <div class="col-sm-2">
+                                  <img src="{{ url_for('static', filename='assets/img/service-list-icon-2.png') }}" alt="" class="iconbox-media-img iconbox-media-img-lg">
+                                </div>
+                                <div class="col-sm-6">
+                                  <span class="rating">
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x"></span>
+                                      <span class="fa fa-star fa-2x grey-star"></span>
+                                      <span class="fa fa-star fa-2x grey-star"></span>
+                                  </span>
+                                  <p>
+                                  <span>Username,</span> <span>12 Februari 2018,</span> <span>14.00</span>
+                                  </p>
+                                  <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                        <div id="roi" class="tab-pane ">
+                          <div class="grafik">
+                            <canvas id="line_chart"></canvas>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+    <!-- .popup-form-wrap-->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/spinner.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/Chart.min.js') }}"></script>
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-wysihtml5/wysihtml5-0.3.0.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-wysihtml5/bootstrap-wysihtml5.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-colorpicker/js/bootstrap-colorpicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/bootstrap-timepicker/js/bootstrap-timepicker.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/jquery-multi-select/js/jquery.multi-select.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/advance/jquery-multi-select/js/jquery.quicksearch.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/advanced-form-components.js') }}"></script>
+
+    <script>
+      var speedCanvas = document.getElementById("line_chart");
+
+      Chart.defaults.global.defaultFontFamily = "Lato";
+      Chart.defaults.global.defaultFontSize = 18;
+
+      var dataFirst = {
+          label: "Investasi Sapi",
+          data: [0, 23, 34, 35, 55, 70, 46],
+          lineTension: 0.3,
+          fill: false,
+          borderColor: 'red',
+          backgroundColor: 'transparent',
+          pointBorderColor: 'red',
+          pointBackgroundColor: 'lightgreen',
+          pointRadius: 5,
+          pointHoverRadius: 10,
+          pointBorderWidth: 2,
+          pointStyle: 'circle'
+        };
+
+      var dataSecond = {
+          label: "Investasi Kambing",
+          data: [40, 15, 60, 44, 62, 50, 78],
+          lineTension: 0.3,
+          fill: false,
+          borderColor: 'blue',
+          backgroundColor: 'transparent',
+          pointBorderColor: 'purple',
+          pointBackgroundColor: 'lightgreen',
+          pointRadius: 5,
+          pointHoverRadius: 10,
+          pointBorderWidth: 2
+        };
+
+      var speedData = {
+        labels: ["2012", "2013", "2014", "2015", "2016", "2017", "2018"],
+        datasets: [dataFirst, dataSecond]
+      };
+
+      var chartOptions = {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            boxWidth: 20,
+            fontColor: 'black'
+          }
+        }
+      };
+
+      var lineChart = new Chart(speedCanvas, {
+        type: 'line',
+        data: speedData,
+        options: chartOptions
+      });
+    </script>
+{% endblock %}

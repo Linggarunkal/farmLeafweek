@@ -1,0 +1,77 @@
+{% extends 'base/based.html' %}
+{% block title %}Payment Recieve{% endblock %}
+{{ super() }}
+{% block content %}
+      <!-- .team-section-->
+      <div id="serviceListSection" class="service-list-section module md-bg-light pb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <section class="panel">
+                <div class="panel-body">
+                  <div class="stepy-tab visible-lg">
+                      <ul id="default-titles" class="stepy-titles clearfix">
+                          <li class="current-step">
+                              <div><i class="fa fa-clipboard fa-3x"></i> <center>Review</center></div>
+                          </li>
+                          <li class="stepy-arrow current-arrow"></li>
+                          <li class="current-step">
+                              <div><i class="fa fa-check-square fa-3x"></i> <center>Payment Method</center></div>
+                          </li>
+                          <li class="stepy-arrow current-arrow"></li>
+                          <li class="current-step">
+                              <div><i class="fa fa-credit-card fa-3x"></i> <center>Payment</center></div>
+                          </li>
+                          <li class="stepy-arrow current-arrow"></li>
+                          <li>
+                              <div><i class="fa fa-clock-o fa-3x"></i> <center>Livestock</center></div>
+                          </li>
+                          <li class="stepy-arrow"></li>
+                          <li>
+                              <div><i class="fa fa-clock-o fa-3x"></i> <center>Livestock Breeding</center></div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="stepy-tab2 hidden-lg">
+                    <ul>
+                      <li class="current-step">Review &emsp;<i class="fa fa-angle-right"></i> </li>
+                      <li class="current-step">Choose Payment Method &emsp;<i class="fa fa-angle-right"></i> </li>
+                      <li class="current-step">Payment &emsp;<i class="fa fa-angle-right"></i> </li>
+                      <li>Prepraring Livestock &emsp;<i class="fa fa-angle-right"></i> </li>
+                      <li>Livestock Breeding Process</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="serviceListSection" class="service-list-section md-bg-light pb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="panel">
+                <header class="panel-heading">
+                  <h2>Payment Received</h2>
+                </header>
+
+                <div class="panel-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <h4>INVOICE/INVEST/LEAFWEEK/004</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,485 @@
+{% extends 'base/basedhome.html' %}
+{% block title %}{% endblock %}
+{{ super() }}
+{% block content %}
+      <div id="pageIntro" class="page-intro page-intro-hero page-intro-layout-1 md-bg-dark">
+        <div data-bg-slideshow-src="{{ url_for('static', filename='assets/img/slider/slider-.jpg') }}" data-bg-slideshow-amount="4" data-slideshow-delay="7000" data-bg-slideshow-animation="kenburns" class="bg-slideshow"></div>
+        <!-- .bg-slideshow-->
+        <div data-css-opacity=".4" class="bg-overlay bg-black"></div>
+        <!-- .bg-overlay-->
+        <div class="page-intro-align">
+          <div class="container">
+            <div class="row-content row">
+              <div class="col-content col-md-6">
+                <h1 class="section-title-xl">Quote Produk</h1>
+                <p class="text-lead">Deskripsi Produk</p>
+                <div class="section-cta"><a href="#" class="btn btn-lg btn-pill btn-shadow btn-theme-1"><i class="icon icon-left fa fa-fw fa-arrow-right"></i> Learn More</a><a href="#" data-mfp-src="https://www.youtube.com/watch?v=LViVa-kKqzA" class="btn btn-lg btn-outline btn-pill btn-shadow btn-default popup-youtube"><i class="icon icon-left fa fa-fw fa-play"></i> Watch Video</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .page-intro-->
+      <div id="serviceListSection" class="service-list-section module md-bg-white">
+        <div class="container">
+          <div class="row-iconbox row">
+            <div class="col-iconbox col-sm-4">
+              <div class="iconbox iconbox-align-center">
+                <div class="iconbox-media"><img src="{{ url_for('static', filename='assets/img/service-list-icon-1.png') }}" alt="" class="iconbox-media-img iconbox-media-img-lg">
+                </div>
+                <div class="iconbox-content">
+                  <div class="iconbox-header">
+                    <div class="iconbox-header-title">Web Development</div>
+                  </div>
+                  <div class="iconbox-body">
+                    <p class="text-lead">So life seasons for a. Him there face it Grass winged dominion don't night thing, let fly. Years creepeth male gathered all herb good.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-iconbox col-sm-4">
+              <div class="iconbox iconbox-align-center">
+                <div class="iconbox-media"><img src="{{ url_for('static', filename='assets/img/service-list-icon-2.png') }}" alt="" class="iconbox-media-img iconbox-media-img-lg">
+                </div>
+                <div class="iconbox-content">
+                  <div class="iconbox-header">
+                    <div class="iconbox-header-title">Graphic Design</div>
+                  </div>
+                  <div class="iconbox-body">
+                    <p class="text-lead">So life seasons for a. Him there face it Grass winged dominion don't night thing, let fly. Years creepeth male gathered all herb good.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-iconbox col-sm-4">
+              <div class="iconbox iconbox-align-center">
+                <div class="iconbox-media"><img src="{{ url_for('static', filename='assets/img/service-list-icon-3.png') }}" alt="" class="iconbox-media-img iconbox-media-img-lg">
+                </div>
+                <div class="iconbox-content">
+                  <div class="iconbox-header">
+                    <div class="iconbox-header-title">SEO Optimization</div>
+                  </div>
+                  <div class="iconbox-body">
+                    <p class="text-lead">So life seasons for a. Him there face it Grass winged dominion don't night thing, let fly. Years creepeth male gathered all herb good.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .team-section-->
+      <div id="pricingSection" class="pricing-section pt-60 pb-60 md-bg-light">
+        <div class="container">
+          <div class="row-content row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="section-header">
+                <h2 class="section-title">Catalog Investation</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row-content row">
+          	<section class="regular hidden-xs">
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 1</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 2</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 3</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 4</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 5</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 6</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+			</section>    
+
+			<div class="visible-xs">
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 1</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 2</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 3</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 4</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 5</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              <div class="pricing-table md-bg-white">
+                <a href="detail-catalog.html">
+                <div class="pricing-table-header img-fixed">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                </div>
+                <div class="pricing-table-header-title">Nama Catalog 6</div>
+                <div class="pricing-table-content md-bg-primary"> 
+                  <div class="row">
+                    <div class="pricing-table-cta col-sm-5">
+                      <div class="col-sm-12">
+                        <strong>Harga</strong>
+                        <p>Rp.2.000.000</p>
+                      </div>
+                    </div>
+                    <div class="pricing-table-cta col-sm-7">
+                      <div class="col-sm-12">
+                        <strong>Return Investation</strong>
+                        <p>10% - 20% Per Tahun</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+			</div>      
+          </div>
+          <div class="row-pricing-table row">
+            <div class="col-md-12">
+              <a href="catalog.html" class="btn btn-lg btn-pill btn-shadow btn-primary">See More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .How We Work-->
+      <div id="pricingSection" class="pricing-section pt-60 pb-60  md-bg-white">
+        <div class="container">
+          <div class="row-content row">
+            <div class="col-md-12">
+              <div class="section-header">
+                <h2 class="section-title">How We Work</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row-content row">
+            <div class="col-pricing-table col-xs-12 col-md-3">
+              <div class="pricing-table md-bg-white">
+                <div class="pricing-table-header-title">Beli Ternak</div>
+                <div class="pricing-table-header">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" class="img-responsive img-thumb-150">
+                </div>
+                <div class="pricing-table-content"> 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-pricing-table col-xs-12 col-md-3">
+              <div class="pricing-table md-bg-white">
+                <div class="pricing-table-header-title">Proses Ternak</div>
+                <div class="pricing-table-header">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-1.jpg') }}" class="img-responsive img-thumb-150">
+                </div>
+                <div class="pricing-table-content"> 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-pricing-table col-xs-12 col-md-3">
+              <div class="pricing-table md-bg-white">
+                <div class="pricing-table-header-title">Monitoring</div>
+                <div class="pricing-table-header">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive img-thumb-150">
+                </div>
+                <div class="pricing-table-content"> 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-pricing-table col-xs-12 col-md-3">
+              <div class="pricing-table md-bg-white">
+                <div class="pricing-table-header-title">Jual Ternak</div>
+                <div class="pricing-table-header">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-1.jpg') }}" class="img-responsive img-thumb-150">
+                </div>
+                <div class="pricing-table-content"> 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>                      
+          </div>
+        </div>
+      </div>
+
+
+    <!-- .popup-form-wrap-->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/slick/slick.js') }}" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      });
+    });
+</script>
+
+{% endblock %}

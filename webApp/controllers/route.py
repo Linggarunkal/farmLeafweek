@@ -6,12 +6,61 @@ from webApp.library.connection import *
 from webApp.library.config import *
 from webApp.models.auth import signup, passwdHash, signin
 from webApp.models.catalog import cataloglist
-import json
+import os
+
 
 # GET Process
 @app.route('/')
 def start():
-    return render_template('printer/index.html')
+    images = os.listdir(os.path.join(app.static_folder, "assets/img/slider"))
+    print images
+    return render_template('home/home-slider.html', sliderImg=images)
+
+
+@app.route('/template/test')
+def payment():
+    return render_template('base/testing.html')
+
+
+@app.route('/transaction/review')
+def transReview():
+    return render_template('transaction/01-review.html')
+
+
+@app.route('/transaction/payment')
+def transPayment():
+    return render_template('transaction/02-payment-method.html')
+
+
+@app.route('/transaction/recieve')
+def transRecieve():
+    return render_template('transaction/03-payment-recieve.html')
+
+
+@app.route('/transaction/preparelivestock')
+def transPreparelivestock():
+    return render_template('transaction/04-prepare-livestock.html')
+
+
+@app.route('/transaction/breedinglivestock')
+def transBreedinglivestock():
+    return render_template('transaction/05-payment-breeding-livestock.html')
+
+
+@app.route('/catalog/investment')
+def catInvestment():
+    return render_template('catalog/catalog.html')
+
+
+@app.route('/catalog/investment/detail')
+def catInvestDet():
+    return render_template('catalog/detail-catalog.html')
+
+
+@app.route('/demo/simulation')
+def demoSimulation():
+    return render_template('demo/simulasi.html')
+
 
 
 @app.route('/testing2')
@@ -24,19 +73,19 @@ def testing2():
 
 
 # isi catalog foto, nama, harga return value, id catalog(for link)
-@app.route('/catalog/investment')
-def cataloginvest():
-    catalog = cataloglist()
-    listcatalog = catalog.listreview()
-    print listcatalog
-    return listcatalog
+# @app.route('/catalog/investment')
+# def cataloginvest():
+#     catalog = cataloglist()
+#     listcatalog = catalog.listreview()
+#     print listcatalog
+#     return listcatalog
 
 
-@app.route('/catalog/investment/<catalogid>')
-def catalogdetailinvert(catalogid):
-    catalog = cataloglist()
-    detCat = catalog.detailCatalog(catalogid)
-    return detCat
+# @app.route('/catalog/investment/<catalogid>')
+# def catalogdetailinvert(catalogid):
+#     catalog = cataloglist()
+#     detCat = catalog.detailCatalog(catalogid)
+#     return detCat
 
 
 @app.route('/username/<user>')
