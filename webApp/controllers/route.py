@@ -12,9 +12,9 @@ import os
 # GET Process
 @app.route('/')
 def start():
-    images = os.listdir(os.path.join(app.static_folder, "assets/img/slider"))
-    print images
-    return render_template('home/home-slider.html', sliderImg=images)
+    # images = os.listdir(os.path.join(app.static_folder, "assets/img/slider"))
+    # print images
+    return render_template('home/home.html')
 
 
 @app.route('/template/test')

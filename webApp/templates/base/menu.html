@@ -1,0 +1,20 @@
+<ul class="nav navbar-nav navbar-right">
+    <li>
+        <a href="{{ url_for('start') }}">Home</a>
+    </li>
+    <li>
+        <a href="{{ url_for('catInvestment') }}">Catalog Investasi</a>
+    </li>
+    <li>
+        <a href="{{ url_for('demoSimulation') }}">Simulasi</a>
+    </li>
+    <li>
+        <button type="button" data-mfp-src="#popupSignin" class="navbar-btn btn btn-xs btn-shadow btn-theme-1 popup-inline">Sign In</button>
+    </li>
+    <li>
+        <button type="button" data-mfp-src="#popupSignup" class="navbar-btn btn btn-xs btn-shadow btn-theme-1 popup-inline">Sign Up</button>
+    </li>
+</ul>
+
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>

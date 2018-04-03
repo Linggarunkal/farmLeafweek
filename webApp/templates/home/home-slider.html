@@ -1,72 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
-    <link rel="icon" href="{{ url_for }}assets/img/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor.css">
-    <link id="theme" rel="stylesheet" href="assets/css/theme-1.css">
-    <link rel="stylesheet" href="assets/css/space.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/custom-bootstrap-margin-padding.css">
-
-    <!-- slick slider -->
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
-  	<link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
-
-  	<link href="assets/css/full-slider.css" rel="stylesheet">
-  	<link href="assets/css/carousel.css" rel="stylesheet">
-
-    <script src="assets/js/modernizr.js"></script>
-  </head>
-  <body>
-    <div id="pageLoader" class="page-loader">
-      <div class="spinner">
-        <div class="bounce"></div>
-        <div class="bounce"></div>
-        <div class="bounce"></div>
-      </div>
-    </div>
-    <!-- .page-loader-->
-    <header id="masthead" class="site-header site-header-fixed-top">
-      <nav id="siteHeaderNavbar" class="site-header-navbar navbar navbar-lg navbar-fixed-top navbar-bg-from-transparent navbar-fg-from-light navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="custom-navbar-toggle collapsed"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-            <a href="#" class="navbar-brand">
-              <img src="assets/img/logo-dark.png" alt="" class="navbar-brand-media-img navbar-brand-media-img-dark">
-              <img src="assets/img/logo-light.png" alt="" class="navbar-brand-media-img navbar-brand-media-img-light">
-            </a>
-          </div>
-          <!-- .navbar-header-->
-          <div id="navbar-collapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="index.html">Home</a>
-              </li>
-              <li><a href="catalog.html">Catalog Investasi</a>
-              </li>
-              <li><a href="simulasi.html">Simulasi</a>
-              </li>
-              <li>
-                <button type="button" data-mfp-src="#popupSignin" class="navbar-btn btn btn-xs btn-shadow btn-theme-1 popup-inline">Sign In</button>
-              </li>
-              <li>
-                <button type="button" data-mfp-src="#popupSignup" class="navbar-btn btn btn-xs btn-shadow btn-theme-1 popup-inline">Sign Up</button>
-              </li>
-            </ul>
-          </div>
-          <!-- .navbar-collapse-->
-        </div>
-      </nav>
-      <!-- .site-header-navbar-->
-    </header>
-    <!-- .site-header-->
-    <div id="content" class="site-content">
+{% extends 'base/basedhome.html' %}
+{% block title %}Home Leafweek Investment{% endblock %}
+{{ super() }}
+{% block content %}
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -75,7 +10,7 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('assets/img/slider/slider-3.jpg')">
+          <div class="carousel-item active" style="background-image: url('{{ url_for('static', filename='assets/img/slider/slider-3.jpg') }}')">
             <div class="carousel-caption d-none d-md-block">
               	<div class="row">
 	              <div class="col-content col-md-6">
@@ -87,7 +22,7 @@
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('assets/img/slider/slider-2.jpg')">
+          <div class="carousel-item" style="background-image: url('{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}')">
             <div class="carousel-caption d-none d-md-block">
               	<div class="row">
 	              <div class="col-content col-md-6">
@@ -99,7 +34,7 @@
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('assets/img/slider/slider-1.jpg')">
+          <div class="carousel-item" style="background-image: url('{{ url_for('static', filename='assets/img/slider/slider-1.jpg') }}')">
           	<div class="carousel-caption d-none d-md-block">
               	<div class="row">
 	              <div class="col-content col-md-6 caption-bg">
@@ -125,7 +60,7 @@
           <div class="row-iconbox row">
             <div class="col-iconbox col-sm-4">
               <div class="iconbox iconbox-align-center">
-                <div class="iconbox-media"><img src="assets/img/service-list-icon-1.png" alt="" class="iconbox-media-img iconbox-media-img-lg">
+                <div class="iconbox-media"><img src="{{ url_for('static', filename='assets/img/service-list-icon-1.png') }}" alt="" class="iconbox-media-img iconbox-media-img-lg">
                 </div>
                 <div class="iconbox-content">
                   <div class="iconbox-header">
@@ -139,7 +74,7 @@
             </div>
             <div class="col-iconbox col-sm-4">
               <div class="iconbox iconbox-align-center">
-                <div class="iconbox-media"><img src="assets/img/service-list-icon-2.png" alt="" class="iconbox-media-img iconbox-media-img-lg">
+                <div class="iconbox-media"><img src="{{ url_for('static', filename='assets/img/service-list-icon-2.png') }}" alt="" class="iconbox-media-img iconbox-media-img-lg">
                 </div>
                 <div class="iconbox-content">
                   <div class="iconbox-header">
@@ -153,7 +88,7 @@
             </div>
             <div class="col-iconbox col-sm-4">
               <div class="iconbox iconbox-align-center">
-                <div class="iconbox-media"><img src="assets/img/service-list-icon-3.png" alt="" class="iconbox-media-img iconbox-media-img-lg">
+                <div class="iconbox-media"><img src="{{ url_for('static', filename='assets/img/service-list-icon-3.png') }}" alt="" class="iconbox-media-img iconbox-media-img-lg">
                 </div>
                 <div class="iconbox-content">
                   <div class="iconbox-header">
@@ -184,7 +119,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 1</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -210,7 +145,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 2</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -236,7 +171,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 3</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -262,7 +197,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 4</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -288,7 +223,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 5</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -314,7 +249,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 6</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -343,7 +278,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 1</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -369,7 +304,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 2</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -395,7 +330,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 3</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -421,7 +356,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 4</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -447,7 +382,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 5</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -473,7 +408,7 @@
               <div class="pricing-table md-bg-white">
                 <a href="detail-catalog.html">
                 <div class="pricing-table-header img-fixed">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-header-title">Nama Catalog 6</div>
                 <div class="pricing-table-content md-bg-primary"> 
@@ -519,7 +454,7 @@
               <div class="pricing-table md-bg-white">
                 <div class="pricing-table-header-title">Beli Ternak</div>
                 <div class="pricing-table-header">
-                  <img src="assets/img/ternak/1.jpg" class="img-responsive img-thumb-150">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" class="img-responsive img-thumb-150">
                 </div>
                 <div class="pricing-table-content"> 
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -530,7 +465,7 @@
               <div class="pricing-table md-bg-white">
                 <div class="pricing-table-header-title">Proses Ternak</div>
                 <div class="pricing-table-header">
-                  <img src="assets/img/slider/slider-1.jpg" class="img-responsive img-thumb-150">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-1.jpg') }}" class="img-responsive img-thumb-150">
                 </div>
                 <div class="pricing-table-content"> 
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -541,7 +476,7 @@
               <div class="pricing-table md-bg-white">
                 <div class="pricing-table-header-title">Monitoring</div>
                 <div class="pricing-table-header">
-                  <img src="assets/img/ternak/2.jpg" class="img-responsive img-thumb-150">
+                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive img-thumb-150">
                 </div>
                 <div class="pricing-table-content"> 
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -552,7 +487,7 @@
               <div class="pricing-table md-bg-white">
                 <div class="pricing-table-header-title">Jual Ternak</div>
                 <div class="pricing-table-header">
-                  <img src="assets/img/slider/slider-1.jpg" class="img-responsive img-thumb-150">
+                  <img src="{{ url_for('static', filename='assets/img/slider/slider-1.jpg') }}" class="img-responsive img-thumb-150">
                 </div>
                 <div class="pricing-table-content"> 
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -562,180 +497,16 @@
           </div>
         </div>
       </div>
-      <!-- .download-section-->
-      <div id="siteFooter" class="site-footer md-bg-dark site-footer-layout-1">
-        <div class="site-footer-bottom module module-mini">
-          <div data-css-opacity=".12" class="cover-absolute bg-black"></div>
-          <div class="container">
-            <p class="mb-0">Copyright © 2016 BFC. All Rights Reserved.          </p>
-          </div>
-        </div>
-      </div>
-      <!-- .site-footer-->
-    </div>
-    <div id="popupSignin" class="popup-form-wrap md-bg-white mfp-hide">
-      <div class="tab-content">
-        <div id="signInFormWrap" class="tab-pane fade in active">
-          <form id="signInForm">
-            <div class="form-group">
-              <div class="popup-form-title">Sign In for Start Investation</div>
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="signInEmail">Email</label>
-              <input id="signInEmail" type="email" placeholder="Email address" name="email" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="signInPassword">Password</label>
-              <input id="signInPassword" type="password" placeholder="Enter password" name="password" class="form-control">
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Log In</button>
-            </div>
-          </form>
-          <div class="popup-form-footer">
-            <div class="btn-group btn-group-lg btn-group-justified"><a href="#signUpFormWrap" data-toggle="tab" class="btn btn-default">Sign Up</a><a href="#resetPasswordFormWrap" data-toggle="tab" class="btn btn-default">Forgot Password?</a></div>
-          </div>
-        </div>
-        <div id="signUpFormWrap" class="tab-pane fade">
-          <form id="signUpForm">
-            <div class="form-group">
-              <div class="popup-form-title">Registration</div>
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="first_name">First Name</label>
-              <input id="first_name" type="text" placeholder="First Name" name="first_name" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="last_name">Last Name</label>
-              <input id="last_name" type="text" placeholder="Last Name" name="last_name" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="signUpEmail">Email</label>
-              <input id="signUpEmail" type="email" placeholder="Email address" name="email" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="signUpPassword">Password</label>
-              <input id="signUpPassword" type="password" placeholder="Create a password" name="password" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="verify_password">Verify Password</label>
-              <input id="verify_password" type="password" placeholder="Verifiy password" name="verify_password" class="form-control">
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Sign Up</button>
-            </div>
-          </form>
-          <div class="popup-form-footer">
-            <div class="btn-group btn-group-lg btn-group-justified"><a href="#signInFormWrap" data-toggle="tab" class="btn btn-default">Already Signed Up?</a></div>
-          </div>
-        </div>
-        <div id="resetPasswordFormWrap" class="tab-pane fade">
-          <form id="resetPasswordForm">
-            <div class="form-group">
-              <div class="popup-form-title">Reset Your Password</div>
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="resetPasswordEmail">Email</label>
-              <input id="resetPasswordEmail" type="email" placeholder="Email address" name="email" class="form-control">
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Reset Password</button>
-            </div>
-          </form>
-          <div class="popup-form-footer">
-            <div class="btn-group btn-group-lg btn-group-justified"><a href="#signInFormWrap" data-toggle="tab" class="btn btn-default">Log In</a><a href="#signUpFormWrap" data-toggle="tab" class="btn btn-default">Sign Up</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="popupSignup" class="popup-form-wrap md-bg-white mfp-hide">
-      <div class="tab-content">
-        <div id="signup" class="tab-pane fade in active">
-          <form id="signUpForm">
-            <div class="form-group">
-              <div class="popup-form-title">Registration</div>
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="first_name">First Name</label>
-              <input id="first_name" type="text" placeholder="First Name" name="first_name" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="last_name">Last Name</label>
-              <input id="last_name" type="text" placeholder="Last Name" name="last_name" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="signUpEmail">Email</label>
-              <input id="signUpEmail" type="email" placeholder="Email address" name="email" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="signUpPassword">Password</label>
-              <input id="signUpPassword" type="password" placeholder="Create a password" name="password" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="verify_password">Verify Password</label>
-              <input id="verify_password" type="password" placeholder="Verifiy password" name="verify_password" class="form-control">
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Sign Up</button>
-            </div>
-          </form>
-          <div class="popup-form-footer">
-            <div class="btn-group btn-group-lg btn-group-justified"><a href="#signin" data-toggle="tab" class="btn btn-default">Already Signed Up?</a></div>
-          </div>
-        </div>
-        <div id="signin" class="tab-pane fade">
-          <form id="signInForm">
-            <div class="form-group">
-              <div class="popup-form-title">Sign In for Start Investation</div>
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="signInEmail">Email</label>
-              <input id="signInEmail" type="email" placeholder="Email address" name="email" class="form-control">
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="signInPassword">Password</label>
-              <input id="signInPassword" type="password" placeholder="Enter password" name="password" class="form-control">
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Log In</button>
-            </div>
-          </form>
-          <div class="popup-form-footer">
-            <div class="btn-group btn-group-lg btn-group-justified"><a href="#signup" data-toggle="tab" class="btn btn-default">Sign Up</a><a href="#forgotpassword" data-toggle="tab" class="btn btn-default">Forgot Password?</a></div>
-          </div>
-        </div>
-        <div id="forgotpassword" class="tab-pane fade">
-          <form id="resetPasswordForm">
-            <div class="form-group">
-              <div class="popup-form-title">Reset Your Password</div>
-            </div>
-            <div class="form-group form-group-lg">
-              <label for="resetPasswordEmail">Email</label>
-              <input id="resetPasswordEmail" type="email" placeholder="Email address" name="email" class="form-control">
-            </div>
-            <div class="form-group">
-              <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Reset Password</button>
-            </div>
-          </form>
-          <div class="popup-form-footer">
-            <div class="btn-group btn-group-lg btn-group-justified"><a href="#signin" data-toggle="tab" class="btn btn-default">Log In</a><a href="#signup" data-toggle="tab" class="btn btn-default">Sign Up</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-  
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/vendor.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
 
-    <!-- .popup-form-wrap-->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/vendor.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.slider.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/carousel.js') }}"></script>
 
-    <script src="assets/js/jquery.slider.js"></script>
-    <script src="assets/js/carousel.js"></script>
-
-    <script src="assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ url_for('static', filename='assets/slick/slick.js') }}" type="text/javascript" charset="utf-8"></script>
 
     <script type="text/javascript">
     $(document).ready(function() {
@@ -747,5 +518,4 @@
       });
     });
 </script>
-  </body>
-</html>
+{% endblock %}
