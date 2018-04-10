@@ -7,6 +7,7 @@ from webApp.library.config import *
 from webApp.models.auth import signup, passwdHash, signin
 from webApp.models.catalog import cataloglist
 import os
+from webApp.library.response_message import messages
 
 
 # GET Process
@@ -15,6 +16,13 @@ def start():
     # images = os.listdir(os.path.join(app.static_folder, "assets/img/slider"))
     # print images
     return render_template('home/home.html')
+
+
+@app.route("/test/response")
+def testResp():
+    message = messages(500)
+    tempe = message.resp(None)
+    return tempe
 
 
 @app.route('/template/test')
