@@ -104,7 +104,12 @@ def username(user):
 #dasboard user
 @app.route('/user/dasboard/home')
 def userDasboardHome():
-    return render_template('user_dasboard/home.html')
+    return render_template('user_dasboard/home.html', testing="testing")
+
+
+@app.route('/user/dasboard/transaction')
+def userDasboardTrans():
+    return render_template('user_dasboard/trans_dasboard.html')
 
 # Post Status
 @app.route('/postRegistration')
