@@ -101,6 +101,11 @@ def username(user):
     return jsonify({'Message': 'Username', 'name': user})
 
 
+#dasboard user
+@app.route('/user/dasboard/home')
+def userDasboardHome():
+    return render_template('user_dasboard/home.html')
+
 # Post Status
 @app.route('/postRegistration')
 def postregistration():
