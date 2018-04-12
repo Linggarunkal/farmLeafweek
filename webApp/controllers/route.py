@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from webApp import app
-from flask import render_template, jsonify
+from flask import render_template, jsonify, request
 from webApp.library.connection import *
 from webApp.library.config import *
 from webApp.models.auth import signup, passwdHash, signin
@@ -104,12 +104,48 @@ def username(user):
 #dasboard user
 @app.route('/user/dasboard/home')
 def userDasboardHome():
-    return render_template('user_dasboard/home.html', testing="testing")
+    active = 'home'
+    return render_template('user_dasboard/home.html', active=active)
 
 
 @app.route('/user/dasboard/transaction')
 def userDasboardTrans():
-    return render_template('user_dasboard/trans_dasboard.html')
+    active = 'transaction'
+    return render_template('user_dasboard/trans_dasboard.html', active=active)
+
+
+@app.route('/user/dasboard/disbursement')
+def userDasboardDisbursement():
+    active = 'disbursement'
+    return render_template('user_dasboard/disbursement.html', active=active)
+
+
+@app.route('/user/dasboard/timeline')
+def userDasboardTimeline():
+    active = 'timeline'
+    return render_template('user_dasboard/timeline.html', active=active)
+
+
+@app.route('/user/dasboard/weight')
+def userDasboardweight():
+    active = 'berat'
+    return render_template('user_dasboard/home.html', active=active)
+
+
+@app.route('/user/dasboard/feedback')
+def userDasboardFeedback():
+    active = 'feedback'
+    return render_template('user_dasboard/home.html', active=active)
+
+@app.route('/user/dasboard/invoice')
+def userDasboardInvoice():
+    return render_template('user_dasboard/invoice.html')
+
+
+@app.route('/user/dasboard/profile')
+def userDasboardProfile():
+    return render_template('user_dasboard/profile.html')
+
 
 # Post Status
 @app.route('/postRegistration')

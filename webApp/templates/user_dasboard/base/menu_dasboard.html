@@ -1,40 +1,41 @@
 <!--Category name-->
 <li class="list-header">Dasboard List</li>
 <!--Menu list item-->
-<li class="active-sub">
-    <a href="index.html">
+<li {% if active == 'home'%}class="active-sub"{% endif %}>
+    <a href="{{ url_for('userDasboardHome') }}">
         <i class="demo-pli-home"></i>
         <span class="menu-title">Dashboard</span>
     </a>
 </li>
-<li>
-    <a href="transaction.html">
+<li {% if active == 'transaction'%}class="active-sub"{% endif %}>
+    <a href="{{ url_for('userDasboardTrans') }}">
         <i class="ti-files"></i>
         <span class="menu-title">Transaction</span>
     </a>
 </li>
-<li>
-    <a href="disbursement.html">
+<li {% if active == 'disbursement'%}class="active-sub"{% endif %}>
+    <a href="{{ url_for('userDasboardDisbursement') }}">
         <i class="fa fa-money"></i>
         <span class="menu-title">Pencairan Dana</span>
     </a>
 </li>
-<li>
-    <a href="#">
+<li {% if active == 'timeline' or active == 'berat' %}class="active-sub"{% endif %}>
+    <a>
         <i class="demo-pli-tactic"></i>
         <span class="menu-title">Report</span>
         <i class="arrow"></i>
     </a>
     <!--Submenu-->
-    <ul class="collapse">
-        <li><a href="#">Berat Ternak</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
+    <ul class="collapse {% if active == 'timeline' or active == 'berat' %}in{% endif %}">
+        <li><a href="{{ url_for('userDasboardweight') }}">Berat Ternak</a></li>
+        <li><a href="{{ url_for('userDasboardTimeline') }}">Timeline</a></li>
     </ul>
 </li>
-<li>
-    <a href="widgets.html">
+<li {% if active == 'feedback' %}class="active-sub"{% endif %}>
+    <a href="{{ url_for('userDasboardHome') }}">
         <i class="fa fa-feed"></i>
         <span class="menu-title">Ulasan Investasi</span>
     </a>
 </li>
+
 <li class="list-divider"></li>
