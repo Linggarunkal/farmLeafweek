@@ -11,48 +11,10 @@ from webApp.library.response_message import messages
 
 
 # GET Process
+# Home portal URL
 @app.route('/')
 def start():
-    # images = os.listdir(os.path.join(app.static_folder, "assets/img/slider"))
-    # print images
     return render_template('home/home.html')
-
-
-@app.route("/test/response")
-def testResp():
-    message = messages(500)
-    tempe = message.resp(None)
-    return tempe
-
-
-@app.route('/template/test')
-def payment():
-    return render_template('base/testing.html')
-
-
-@app.route('/transaction/review')
-def transReview():
-    return render_template('transaction/01-review.html')
-
-
-@app.route('/transaction/payment')
-def transPayment():
-    return render_template('transaction/02-payment-method.html')
-
-
-@app.route('/transaction/recieve')
-def transRecieve():
-    return render_template('transaction/03-payment-recieve.html')
-
-
-@app.route('/transaction/preparelivestock')
-def transPreparelivestock():
-    return render_template('transaction/04-prepare-livestock.html')
-
-
-@app.route('/transaction/breedinglivestock')
-def transBreedinglivestock():
-    return render_template('transaction/05-payment-breeding-livestock.html')
 
 
 @app.route('/catalog/investment')
@@ -69,6 +31,34 @@ def catInvestDet():
 def demoSimulation():
     return render_template('demo/simulasi.html')
 
+# @app.route('/template/test')
+# def payment():
+#     return render_template('base/testing.html')
+
+
+@app.route('/user/transaction/review')
+def transReview():
+    return render_template('transaction/01-review.html')
+
+
+@app.route('/user/transaction/payment')
+def transPayment():
+    return render_template('transaction/02-payment-method.html')
+
+
+@app.route('/user/transaction/recieve')
+def transRecieve():
+    return render_template('transaction/03-payment-recieve.html')
+
+
+@app.route('/user/transaction/preparelivestock')
+def transPreparelivestock():
+    return render_template('transaction/04-prepare-livestock.html')
+
+
+@app.route('/user/transaction/breedinglivestock')
+def transBreedinglivestock():
+    return render_template('transaction/05-payment-breeding-livestock.html')
 
 
 @app.route('/testing2')
