@@ -123,3 +123,12 @@ class mysqlconnection(object):
 
         return rownum
 
+    def call_proc(self, procedure, *args):
+        query = "call %s " %procedure
+        query += "(%s)" % args
+
+        self.__open()
+        self.session.execute(query)
+        self.__close()
+        return self.session.fetchall()
+
