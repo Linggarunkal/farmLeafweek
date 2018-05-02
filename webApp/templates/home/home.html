@@ -129,25 +129,26 @@
           </div>
           <div class="row-content row">
           	<section class="regular hidden-xs">
-		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
+              {% for catalog in catLivestock %}
+                <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
               <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
+                <a href="{{ url_for('catInvestDet', catalogid=catalog.catalogId) }}">
                 <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
+                  <img src="{{ url_for('static', filename='catalog/' + catalog.catalogPicture) }}" class="img-responsive">
                 </div>
-                <div class="pricing-table-header-title">Nama Catalog 1</div>
+                <div class="pricing-table-header-title">{{ catalog.namaCatalog }}</div>
                 <div class="pricing-table-content md-bg-primary">
                   <div class="row">
                     <div class="pricing-table-cta col-sm-5">
                       <div class="col-sm-12">
                         <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
+                        <p>Rp. {{ catalog.slotPrice }}</p>
                       </div>
                     </div>
                     <div class="pricing-table-cta col-sm-7">
                       <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
+                        <strong>Return Investment</strong>
+                        <p>{{ catalog.returnInvest }}% Per Year</p>
                       </div>
                     </div>
                   </div>
@@ -155,136 +156,8 @@
                 </a>
               </div>
             </div>
-		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog 2</div>
-                <div class="pricing-table-content md-bg-primary">
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog 3</div>
-                <div class="pricing-table-content md-bg-primary">
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog 4</div>
-                <div class="pricing-table-content md-bg-primary">
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog 5</div>
-                <div class="pricing-table-content md-bg-primary">
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-		    <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog 6</div>
-                <div class="pricing-table-content md-bg-primary">
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
+              {% endfor %}
+
 			</section>
 
 			<div class="visible-xs">
@@ -448,7 +321,7 @@
           </div>
           <div class="row-pricing-table row">
             <div class="col-md-12">
-              <a href="catalog.html" class="btn btn-lg btn-pill btn-shadow btn-primary">See More</a>
+              <a href="{{ url_for('catInvestment') }}" class="btn btn-lg btn-pill btn-shadow btn-primary">See More</a>
             </div>
           </div>
         </div>
@@ -468,10 +341,10 @@
               <div class="pricing-table md-bg-white">
                 <div class="pricing-table-header-title">Beli Ternak</div>
                 <div class="pricing-table-header">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" class="img-responsive img-thumb-150">
+                  <img src="{{ url_for('static', filename='assets/img/livestock/buy.png') }}" class="img-responsive img-thumb-150">
                 </div>
                 <div class="pricing-table-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                  <p>Cari semua jenis ternak yang kita sediakan. Pilih ternak yang sesuai dengan rencana investasi anda dan ekspakesi hasil yang di dapat. </p>
                 </div>
               </div>
             </div>
@@ -479,10 +352,10 @@
               <div class="pricing-table md-bg-white">
                 <div class="pricing-table-header-title">Proses Ternak</div>
                 <div class="pricing-table-header">
-                  <img src="{{ url_for('static', filename='assets/img/slider/slider-1.jpg') }}" class="img-responsive img-thumb-150">
+                  <img src="{{ url_for('static', filename='assets/img/livestock/process.png') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Ternak yang sudah di pilih akan di pelihara oleh peternak - peternak pilihan kami sesuai dengan keahlian masing - masing. </p>
                 </div>
               </div>
             </div>
@@ -490,10 +363,10 @@
               <div class="pricing-table md-bg-white">
                 <div class="pricing-table-header-title">Monitoring</div>
                 <div class="pricing-table-header">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive img-thumb-150">
+                  <img src="{{ url_for('static', filename='assets/img/livestock/monitoring.png') }}" class="img-responsive">
                 </div>
                 <div class="pricing-table-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Pantau setiap perkembangan ternak andak melalui sistem kami. Surveyor Kami akan memberikan update berupa report dan foto terkini kondisi hewan ternak anda. Anda pun juga bisa langsung berkunjung ke tempat perternakan tempat hewan ternak anda di rawat. </p>
                 </div>
               </div>
             </div>
@@ -501,10 +374,10 @@
               <div class="pricing-table md-bg-white">
                 <div class="pricing-table-header-title">Jual Ternak</div>
                 <div class="pricing-table-header">
-                  <img src="{{ url_for('static', filename='assets/img/slider/slider-1.jpg') }}" class="img-responsive img-thumb-150">
+                  <img src="{{ url_for('static', filename='assets/img/livestock/sell.png') }}" class="img-responsive" align="center">
                 </div>
                 <div class="pricing-table-content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>Setelah cukup umur dan sesuai dengan kontrak ternak anda kami akan membantu menjual ternak anda ke tempat penjualan dan bersiaplah menikmati hasil investasi anda. </p>
                 </div>
               </div>
             </div>

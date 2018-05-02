@@ -29,11 +29,11 @@ class livestockFarm(object):
 
     def showDetailLivestock(self, catalogid):
         self.catalogid = catalogid
-    
+
         try:
             conn = mysqlconnection(HOST, USERNAME, PASSWORD, DATABASE)
             condDetail = 'catalog_id = %s'
-            detailLivestock = conn.select('cataloginvestment', condDetail, 'catalog_id,nameCatalog,slotPrice,contractperiod,returnInvest,sharingPeriod,slotAvaible,description', catalog_id=self.catalogid)
+            detailLivestock = conn.select('cataloginvestment', condDetail, 'catalog_id,nameCatalog,slotPrice,contractperiod,returnInvest,sharingPeriod,slotAvaible,catalogPicture', catalog_id=self.catalogid)
             getDetailLivestock = []
             for index, list in enumerate(detailLivestock):
                 strSlotPrice = decimal.Decimal(list[2])
@@ -46,7 +46,8 @@ class livestockFarm(object):
                     "contractPeriod": list[3],
                     "returnInvest": list[4],
                     "sharingPeriod":  list[5],
-                    "slotAvaible": str(strSlotAvaible)
+                    "slotAvaible": str(strSlotAvaible),
+                    "catalogPicture": list[7]
                 }
 
                 getDetailLivestock.append(i)

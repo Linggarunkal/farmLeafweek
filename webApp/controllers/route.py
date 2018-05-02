@@ -8,23 +8,28 @@ from webApp.models.auth import signup, passwdHash, signin
 from webApp.models.catalog import cataloglist
 import os
 from webApp.library.response_message import messages
+from webApp.models.livestock import livestockFarm
 
 
 # GET Process
 # Home portal URL
 @app.route('/')
 def start():
-    return render_template('home/home.html')
+    homeLivestock = livestockFarm()
+    getLivestock = homeLivestock.showHomeLivestock()
+    return render_template('home/home.html', catLivestock=getLivestock)
 
 
-@app.route('/catalog/investment')
+@app.route('/catalog/investment/all')
 def catInvestment():
     return render_template('catalog/catalog.html')
 
 
-@app.route('/catalog/investment/detail')
-def catInvestDet():
-    return render_template('catalog/detail-catalog.html')
+@app.route('/catalog/investment/<catalogid>/detail')
+def catInvestDet(catalogid):
+    detLivestock = livestockFarm()
+    getDetLivestock = detLivestock.showDetailLivestock(catalogid)
+    return render_template('catalog/detail-catalog.html', detailCatalog=getDetLivestock)
 
 
 @app.route('/demo/simulation')

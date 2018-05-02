@@ -2,22 +2,23 @@
 {% block title %}Detail Catalog Investment{% endblock %}
 {{ super() }}
 {% block content %}
+{% for detCatalog in detailCatalog %}
       <div id="feature1Section" class="feature-1-section module md-bg-white pb-80">
         <div class="container">
           <div class="row-content row">
-            <div class="col-el col-sm-8 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-0"><img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" alt="" class="section-media-img"></div>
+            <div class="col-el col-sm-8 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-0"><img src="{{ url_for('static', filename='catalog/'+detCatalog.catalogPicture) }}" alt="" class="section-media-img"></div>
             <div class="col-content col-md-7">
-              <h2 class="section-title">Sapi Perah <small class="text-secondary">Rp. 2.000.000 / Slot</small></h2>
+              <h2 class="section-title">{{ detCatalog.nameCatalog }} <small class="text-secondary">Rp. {{ detCatalog.slotPrice }} / Slot</small></h2>
               <div class="section-content">
                 <div class="row">
                   <div class="col-sm-4">Contact Period</div>
-                  <div class="col-sm-8">: </div>
+                  <div class="col-sm-8">: {{ detCatalog.contractPeriod }} Tahun</div>
                   <div class="col-sm-4">Return Investment</div>
-                  <div class="col-sm-8">: </div>
+                  <div class="col-sm-8">: {{ detCatalog.returnInvest }}%</div>
                   <div class="col-sm-4">Profit Sharing Period</div>
-                  <div class="col-sm-8">: </div>
+                  <div class="col-sm-8">: {{ detCatalog.sharingPeriod }}%</div>
                   <div class="col-sm-4">Available Slot</div>
-                  <div class="col-sm-8">: </div>
+                  <div class="col-sm-8">: {{ detCatalog.slotAvaible }} Slot</div>
 
                   <div class="col-sm-12 mt-30"><strong>Input Total Slot</strong></div>
                   <!--Spinner start-->
@@ -59,7 +60,7 @@
           </div>
         </div>
       </div>
-
+{% endfor %}
       <!--tab nav start-->
       <div id="feature1Section" class="mt-0 md-bg-white">
         <div class="container">
