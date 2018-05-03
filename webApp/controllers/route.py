@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from webApp import app
-from flask import render_template, jsonify, request
+from flask import render_template, jsonify, request, json
 from webApp.library.connection import *
 from webApp.library.config import *
 from webApp.models.auth import signup, passwdHash, signin
@@ -22,28 +22,37 @@ def start():
 
 @app.route('/catalog/investment/all')
 def catInvestment():
-    return render_template('catalog/catalog.html')
+    listLivestock = livestockFarm()
+    getListLivestock = listLivestock.showHomeLivestock()
+    return render_template('catalog/catalog.html', listCatalog=getListLivestock)
 
 
 @app.route('/catalog/investment/<catalogid>/detail')
 def catInvestDet(catalogid):
-    detLivestock = livestockFarm()
-    getDetLivestock = detLivestock.showDetailLivestock(catalogid)
-    return render_template('catalog/detail-catalog.html', detailCatalog=getDetLivestock)
+    detLivestock = livestockFarm() #instance to connect class  livestock
+    getDetLivestock = detLivestock.showDetailLivestock(catalogid) #call list livestock
+    getDescription = detLivestock.catDescription(catalogid) #call description catalog
+    getReview = detLivestock.catalogReview(catalogid) #call review on catalog id
+    return render_template('catalog/detail-catalog.html', detailCatalog=getDetLivestock, review=getReview, desc=getDescription)
 
 
 @app.route('/demo/simulation')
 def demoSimulation():
     return render_template('demo/simulasi.html')
 
-# @app.route('/template/test')
-# def payment():
-#     return render_template('base/testing.html')
-
-
-@app.route('/user/transaction/review')
+# nameCatalog, returnCatalog, contractCatalog, imgCatalog, priceCatalog, profitCatalog, totSlot
+@app.route('/user/transaction/review', methods=['POST', 'GET'])
 def transReview():
-    return render_template('transaction/01-review.html')
+    if request.method == 'POST':
+        nameCatalog = request.form['nameCatalog']
+        returnCatalog = request.form['returnCatalog']
+        contractCatalog = request.form['contractCatalog']
+        imgCatalog = request.form['imgCatalog']
+        priceCatalog = request.form['priceCatalog']
+        profitCatalog = request.form['profitCatalog']
+        totSlot = request.form['totSlot']
+
+        return render_template('transaction/01-review.html', img=imgCatalog, name=nameCatalog, retCatalog=returnCatalog, contractCatalog=contractCatalog, priceCatalog=priceCatalog, profitCatalog=profitCatalog, totSlot=totSlot)
 
 
 @app.route('/user/transaction/payment')

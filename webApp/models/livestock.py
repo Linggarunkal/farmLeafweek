@@ -138,3 +138,19 @@ class livestockFarm(object):
             return detReturnVal
         except Exception as e:
             return "Error Database: %s" % str(e)
+
+    def catDescription(self, catalogid):
+        self.catalogid = catalogid
+        try:
+            conn = mysqlconnection(HOST, USERNAME, PASSWORD, DATABASE)
+            condDesc = 'catalog_id = %s'
+            getDesc = conn.select('cataloginvestment', condDesc, 'description', catalog_id=self.catalogid)
+            detDesc = []
+            for index, list in enumerate(getDesc):
+                i = {
+                    "description": list
+                }
+                detDesc.append(i)
+            return detDesc
+        except Exception as e:
+            return "Error Database: %s" % str(e)

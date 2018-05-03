@@ -2,7 +2,7 @@
 {% block title %}Payment Review{% endblock %}
 {{ super() }}
 {% block content %}
-      <div id="serviceListSection" class="service-list-section module md-bg-light pb-0">
+      <div id="sectionHeader" class="service-list-section module md-bg-light pb-0">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <div id="serviceListSection" class="service-list-section md-bg-light pb-0">
+      <div id="sectionPreview" class="service-list-section md-bg-light pb-0">
         <div class="container">
           <div class="row">
             <div class="col-sm-8">
@@ -57,11 +57,11 @@
                 </header>
                 <div class="panel-body review-catalog">
                   <div class="col-sm-3 mb-20">
-                  	<img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" class="img-responsive">
+                  	<img src="{{ url_for('static', filename='catalog/'+img) }}" class="img-responsive">
                   </div>
                   <div class="col-sm-5">
-              		<p>Catalog Name</p>
-              		<p>Rp. 2.000.000,-</p>
+              		<p>{{ name }}</p>
+              		<p>Rp. {{ priceCatalog }},-</p>
                   	<div class="row">
                       <section class="panel">
                         <div class="panel-body">
@@ -73,7 +73,7 @@
                                           <i class="fa fa-minus"></i>
                                       </button>
                                   </div>
-                                  <input type="text" class="spinner-input form-control" readonly value="1">
+                                  <input type="text" class="spinner-input form-control" readonly value="{{ totSlot }}">
                                   <div class="spinner-buttons input-group-btn">
                                       <button type="button" class="btn spinner-up btn-primary">
                                           <i class="fa fa-plus"></i>
@@ -87,11 +87,11 @@
                     </div>
                   </div>
                   <div class="col-sm-4">
-                  	<p>20% - 40% per tahun</p>
+                  	<p>{{ retCatalog }}% per tahun</p>
                   </div>
-                  <div class="col-sm-12">
-                  	Transaction Number
-                  </div>
+                  <!--<div class="col-sm-12">-->
+                  	<!--Transaction Number-->
+                  <!--</div>-->
                 </div>
               </div>
 
@@ -103,44 +103,79 @@
 					<form method="post" action="#" class="row">
 						<div class="form-group col-sm-6">
 						  <label for="firstname">First Name</label>
-						  <input id="firstname" type="text" name="firstname" class="form-control">
+						  <input id="firstname" type="text" name="firstname" class="form-control" disabled>
 						</div>
 						<div class="form-group col-sm-6">
 						  <label for="lastname">Last Name</label>
-						  <input id="lastname" type="text" name="lastname" class="form-control">
+						  <input id="lastname" type="text" name="lastname" class="form-control" disabled>
 						</div>
 						<div class="form-group col-sm-6">
 						  <label for="emailinvestor">Email</label>
-						  <input id="emailinvestor" type="email" name="emailinvestor" class="form-control">
+						  <input id="emailinvestor" type="email" name="emailinvestor" class="form-control" disabled>
 						</div>
 						<div class="form-group col-sm-6">
 						  <label for="notelp">No Telp</label>
-						  <input id="notelp" type="text" name="notelp" class="form-control">
+						  <input id="notelp" type="text" name="notelp" class="form-control" disabled>
 						</div>
 						<div class="form-group col-sm-6">
 						  <label for="noktp">No KTP</label>
-						  <input id="noktp" type="text" name="noktp" class="form-control">
+						  <input id="noktp" type="text" name="noktp" class="form-control" disabled>
 						</div>
 						<div class="form-group col-sm-6">
 						  <label for="nonpwp">No NPWP</label>
-						  <input id="nonpwp" type="text" name="nonpwp" class="form-control">
+						  <input id="nonpwp" type="text" name="nonpwp" class="form-control" disabled>
 						</div>
 						<div class="form-group col-sm-6">
 						  <label for="provinsi">Provinsi</label>
-						  <input id="provinsi" type="text" name="provinsi" class="form-control">
+						  <input id="provinsi" type="text" name="provinsi" class="form-control" disabled>
 						</div>
 						<div class="form-group col-sm-6">
 						  <label for="kotakab">Kota / Kabupaten</label>
-						  <input id="kotakab" type="text" name="kotakab" class="form-control">
+						  <input id="kotakab" type="text" name="kotakab" class="form-control" disabled>
 						</div>
 						<div class="form-group col-sm-12">
 						  <label for="kotakab">Alamat</label>
-						  <textarea class="form-control" rows="3"></textarea>
+						  <textarea class="form-control" rows="3" disabled></textarea>
 						</div>
+                        <div class="form-group col-sm-6">
+                            <div class="checkbox">
+                                <label for="edit">
+                                    <input type="checkbox" id="edit" name="edit"> Edit Data Profile
+                                </label>
+                            </div>
+                        </div>
 						<div class="form-group col-sm-12">
 						  <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Save</button>
 						</div>
 					</form>
+                </div>
+              </div>
+              <div class="panel">
+                <header class="panel-heading">
+                  <h2>Login</h2>
+                </header>
+                <!--form if user not login-->
+                <div class="panel-body">
+                    <form method="post" action="#" class="row">
+						<div class="form-group col-sm-6">
+						  <label for="email">Email</label>
+						  <input id="email" type="text" name="email" class="form-control">
+						</div>
+						<div class="form-group col-sm-6">
+						  <label for="password">Password</label>
+						  <input id="password" type="password" name="password" class="form-control">
+						</div>
+						<div class="form-group col-sm-12">
+						  <button type="submit" class="btn btn-block btn-pill btn-shadow btn-theme-1">Login</button>
+						</div>
+                        <div class="form-group col-sm-6">
+                            <span class="form-notify help-block text-primary">
+                                <i class="form-notify-icon-info"></i>
+                                Not Have Account ? <button type="button" data-mfp-src="#popupSignup" class="navbar-btn btn btn-xs btn-shadow btn-theme-1 popup-inline">Registration</button>
+                            </span>
+                        </div>
+					</form>
+
                 </div>
               </div>
             </div>

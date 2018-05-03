@@ -41,25 +41,26 @@
             </div>
           </section>
           <div class="row-content row mb-10">
-            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
+            {% for listCatalog in listCatalog %}
+              <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
               <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
+                <a href="{{ url_for('catInvestDet', catalogid=listCatalog.catalogId) }}">
                 <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
+                  <img src="{{ url_for('static', filename='catalog/'+listCatalog.catalogPicture) }}" class="img-responsive">
                 </div>
-                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
-                <div class="pricing-table-content md-bg-primary"> 
+                <div class="pricing-table-header-title">{{ listCatalog.namaCatalog }}</div>
+                <div class="pricing-table-content md-bg-primary">
                   <div class="row">
                     <div class="pricing-table-cta col-sm-5">
                       <div class="col-sm-12">
                         <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
+                        <p>Rp. {{ listCatalog.slotPrice }}</p>
                       </div>
                     </div>
                     <div class="pricing-table-cta col-sm-7">
                       <div class="col-sm-12">
                         <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
+                        <p>{{ listCatalog.returnInvest }}% Per Tahun</p>
                       </div>
                     </div>
                   </div>
@@ -67,214 +68,8 @@
                 </a>
               </div>
             </div>
-            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
-                <div class="pricing-table-content md-bg-primary"> 
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/ternak/1.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
-                <div class="pricing-table-content md-bg-primary"> 
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>  
-            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
-                <div class="pricing-table-content md-bg-primary"> 
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
-                <div class="pricing-table-content md-bg-primary"> 
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
-                <div class="pricing-table-content md-bg-primary"> 
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>  
-            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
-                <div class="pricing-table-content md-bg-primary"> 
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
-                <div class="pricing-table-content md-bg-primary"> 
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-pricing-table col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
-              <div class="pricing-table md-bg-white">
-                <a href="detail-catalog.html">
-                <div class="pricing-table-header img-fixed">
-                  <img src="{{ url_for('static', filename='assets/img/slider/slider-2.jpg') }}" class="img-responsive">
-                </div>
-                <div class="pricing-table-header-title">Nama Catalog Investasi</div>
-                <div class="pricing-table-content md-bg-primary"> 
-                  <div class="row">
-                    <div class="pricing-table-cta col-sm-5">
-                      <div class="col-sm-12">
-                        <strong>Harga</strong>
-                        <p>Rp.2.000.000</p>
-                      </div>
-                    </div>
-                    <div class="pricing-table-cta col-sm-7">
-                      <div class="col-sm-12">
-                        <strong>Return Investation</strong>
-                        <p>10% - 20% Per Tahun</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>            
+            {% endfor %}
+
           </div>
           <!--pagination start-->
           <section class="panel">
